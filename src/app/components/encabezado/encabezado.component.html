@@ -1,0 +1,26 @@
+<div class="navbar bg-secondary text-base-100">
+  <div class="flex-1">
+    <img class="imagenNavbar" src="../../../assets/imagenes/transparente.png" />
+    <a class="btn btn-ghost normal-case text-xl"></a>
+    <div class="navbar-center centerMenu hidden lg:flex">
+      <ul class="menu menu-horizontal px-1 font-sans font-semibold">
+        <li>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class=" ml-auto">
+    <ul class="menu menu-horizontal px-12 font-sans">
+      <li>
+        <details>
+          <summary>{{nombre}}</summary>
+          <ul class="p-2 bg-neutral text-primary">
+            <li *ngIf="isLogged"><a (click)="logout()" >Cerrar Sesion</a></li>
+            <li  *ngIf="isLogin"><a (click)="navigateToPage('Login')">Iniciar sesion</a></li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </div>
+</div>
+
